@@ -7,17 +7,17 @@ namespace Lsquared.Extensions.OpenAuth.OCRA
     {
         // OCRA-1:HOTP-SHA1-6:QN08
         [Theory]
-        [InlineData(SEED20, "", "00000000", "", "", "", "237653")]
-        [InlineData(SEED20, "", "11111111", "", "", "", "243178")]
-        [InlineData(SEED20, "", "22222222", "", "", "", "653583")]
-        [InlineData(SEED20, "", "33333333", "", "", "", "740991")]
-        [InlineData(SEED20, "", "44444444", "", "", "", "608993")]
-        [InlineData(SEED20, "", "55555555", "", "", "", "388898")]
-        [InlineData(SEED20, "", "66666666", "", "", "", "816933")]
-        [InlineData(SEED20, "", "77777777", "", "", "", "224598")]
-        [InlineData(SEED20, "", "88888888", "", "", "", "750600")]
-        [InlineData(SEED20, "", "99999999", "", "", "", "294470")]
-        public void Generate_OneWay_WithHmacSha1TruncatedTo6DigitsUsing8DigitsQuestion(string key, string counter, string question, string password, string session, string timestamp, string expectedCode)
+        [InlineData(SEED20, "00000000", "237653")]
+        [InlineData(SEED20, "11111111", "243178")]
+        [InlineData(SEED20, "22222222", "653583")]
+        [InlineData(SEED20, "33333333", "740991")]
+        [InlineData(SEED20, "44444444", "608993")]
+        [InlineData(SEED20, "55555555", "388898")]
+        [InlineData(SEED20, "66666666", "816933")]
+        [InlineData(SEED20, "77777777", "224598")]
+        [InlineData(SEED20, "88888888", "750600")]
+        [InlineData(SEED20, "99999999", "294470")]
+        public void Generate_OneWay_WithHmacSha1TruncatedTo6DigitsUsing8DigitsQuestion(string key, string question, string expectedCode)
         {
             // arrange
             var ocra = OcraGenerator.Create("OCRA-1:HOTP-SHA1-6:QN08");
@@ -32,17 +32,17 @@ namespace Lsquared.Extensions.OpenAuth.OCRA
 
         // OCRA-1:HOTP-SHA256-8:C-QN08-PSHA1
         [Theory]
-        [InlineData(SEED32, "0", "12345678", PASS1234, "", "", "65347737")]
-        [InlineData(SEED32, "1", "12345678", PASS1234, "", "", "86775851")]
-        [InlineData(SEED32, "2", "12345678", PASS1234, "", "", "78192410")]
-        [InlineData(SEED32, "3", "12345678", PASS1234, "", "", "71565254")]
-        [InlineData(SEED32, "4", "12345678", PASS1234, "", "", "10104329")]
-        [InlineData(SEED32, "5", "12345678", PASS1234, "", "", "65983500")]
-        [InlineData(SEED32, "6", "12345678", PASS1234, "", "", "70069104")]
-        [InlineData(SEED32, "7", "12345678", PASS1234, "", "", "91771096")]
-        [InlineData(SEED32, "8", "12345678", PASS1234, "", "", "75011558")]
-        [InlineData(SEED32, "9", "12345678", PASS1234, "", "", "08522129")]
-        public void Generate_OneWay_WithHmacSha256TruncatedTo8DigitsUsing8DigitsQuestionAndSha1Password(string key, string counter, string question, string password, string session, string timestamp, string expectedCode)
+        [InlineData(SEED32, "0", "12345678", PASS1234, "65347737")]
+        [InlineData(SEED32, "1", "12345678", PASS1234, "86775851")]
+        [InlineData(SEED32, "2", "12345678", PASS1234, "78192410")]
+        [InlineData(SEED32, "3", "12345678", PASS1234, "71565254")]
+        [InlineData(SEED32, "4", "12345678", PASS1234, "10104329")]
+        [InlineData(SEED32, "5", "12345678", PASS1234, "65983500")]
+        [InlineData(SEED32, "6", "12345678", PASS1234, "70069104")]
+        [InlineData(SEED32, "7", "12345678", PASS1234, "91771096")]
+        [InlineData(SEED32, "8", "12345678", PASS1234, "75011558")]
+        [InlineData(SEED32, "9", "12345678", PASS1234, "08522129")]
+        public void Generate_OneWay_WithHmacSha256TruncatedTo8DigitsUsing8DigitsQuestionAndSha1Password(string key, string counter, string question, string password, string expectedCode)
         {
             // arrange
             var ocra = OcraGenerator.Create("OCRA-1:HOTP-SHA256-8:C-QN08-PSHA1");
