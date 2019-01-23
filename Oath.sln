@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28407.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{7E2B79DF-DBC8-4039-B5E9-61DAFF5BE2D0}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{81346877-2C0A-45CB-B238-201F87C470ED}"
+	ProjectSection(SolutionItems) = preProject
+		tests\Directory.Build.props = tests\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{09370167-4CF5-4B9A-A9F9-498BE4C6D0FB}"
+	ProjectSection(SolutionItems) = preProject
+		build\Sources.props = build\Sources.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3257D7AA-E592-47B4-BB7F-291AF266E1F6}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Oath.sln.vsspell = Oath.sln.vsspell
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAuth", "src\OpenAuth\OpenAuth.csproj", "{2CE790B4-5BF8-44D9-8B0F-AA962D83265C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAuth.UnitTests", "tests\OpenAuth.UnitTests\OpenAuth.UnitTests.csproj", "{41C386C0-E872-4743-8759-C330A8DDC398}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CE790B4-5BF8-44D9-8B0F-AA962D83265C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE790B4-5BF8-44D9-8B0F-AA962D83265C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE790B4-5BF8-44D9-8B0F-AA962D83265C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE790B4-5BF8-44D9-8B0F-AA962D83265C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C386C0-E872-4743-8759-C330A8DDC398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C386C0-E872-4743-8759-C330A8DDC398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C386C0-E872-4743-8759-C330A8DDC398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C386C0-E872-4743-8759-C330A8DDC398}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2CE790B4-5BF8-44D9-8B0F-AA962D83265C} = {7E2B79DF-DBC8-4039-B5E9-61DAFF5BE2D0}
+		{41C386C0-E872-4743-8759-C330A8DDC398} = {81346877-2C0A-45CB-B238-201F87C470ED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {447E0A5C-461B-488B-9E46-EB0DB052EAEE}
+	EndGlobalSection
+EndGlobal
