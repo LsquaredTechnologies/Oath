@@ -1,4 +1,4 @@
-# Oauth / OpenAuTHentication
+# Oath / OpenAuTHentication
 
 [![Build status](https://lsquared.visualstudio.com/Oath/_apis/build/status/Oath-CI)](https://lsquared.visualstudio.com/Oath/_build/latest?definitionId=5)
 
