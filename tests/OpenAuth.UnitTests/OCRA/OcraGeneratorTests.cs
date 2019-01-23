@@ -24,7 +24,7 @@ namespace Lsquared.Extensions.OpenAuth.OCRA
             var questionHex = int.Parse(question).ToString("X");
 
             // act
-            var actualCode = ocra.Generate(key, counter, questionHex, password, session, timestamp);
+            var actualCode = ocra.Generate(key, questionHex);
 
             // assert
             Assert.Equal(expectedCode, actualCode);
@@ -49,7 +49,7 @@ namespace Lsquared.Extensions.OpenAuth.OCRA
             var questionHex = int.Parse(question).ToString("X");
 
             // act
-            var actualCode = ocra.Generate(key, counter, questionHex, password, session, timestamp);
+            var actualCode = ocra.Generate(key, counter, questionHex, password);
 
             // assert
             Assert.Equal(expectedCode, actualCode);
