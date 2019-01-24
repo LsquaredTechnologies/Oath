@@ -11,7 +11,7 @@
 ```csharp
 var options = new OtpGeneratorOptions
 {
-    AlgorithmName = "HMACSHA1,  // default value
+    AlgorithmName = "HMACSHA1",  // default value
     CodeLength = 6
 };
 var hotpGenerator = new HotpGenerator(options);
