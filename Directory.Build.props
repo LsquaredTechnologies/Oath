@@ -9,7 +9,7 @@
 
   <PropertyGroup Label="Legal information">
     <Product>Lsquared Oath extensions</Product>
-    <Authors>Lsquared</Authors>
+    <Authors>LionelL</Authors>
     <Company>Lsquared Technologies</Company>
     <Copyright>© Lsquared Technologies. All rights reserved.</Copyright>
   </PropertyGroup>
@@ -19,6 +19,10 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Packaging">
+    <Description>
+      Contains some Oath implementations like HOTP, TOTP, and OCRA.
+    </Description>
+    <Keyword>hotp;totp;ocra;oath;openauthentication;generator;code;pin</Keyword>
     <PackageIconUrl>
       <!-- TODO -->
     </PackageIconUrl>
@@ -31,9 +35,7 @@
 
   <PropertyGroup Label="Source code">
     <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
-    <RepositoryUrl>
-      <!-- Put Git repository url here -->
-    </RepositoryUrl>
+    <RepositoryUrl>https://github.com/LsquaredTechnologies/Oath</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <SharedSourceRoot>$(MSBuildThisFileDirectory)src\Shared\</SharedSourceRoot>
   </PropertyGroup>
@@ -50,8 +52,8 @@
   <!-- Defines project type conventions. -->
   <PropertyGroup>
     <RepoRelativeProjectDir>$([MSBuild]::MakeRelative($(RepositoryRoot), $(MSBuildProjectDirectory)))</RepoRelativeProjectDir>
-    <IsBenchmarkProject Condition="$(MSBuildProjectName.EndsWith('.Performance')) OR $(RepoRelativeProjectDir.Contains('.Bench'))">true</IsBenchmarkProject>
-    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('Tests')) OR $(MSBuildProjectName.EndsWith('.Test'))">true</IsTestProject>
+    <IsBenchmarkProject Condition="$(RepoRelativeProjectDir.Contains('bench')) OR $(MSBuildProjectName.EndsWith('.Benchmarks'))">true</IsBenchmarkProject>
+    <IsTestProject Condition="$(RepoRelativeProjectDir.Contains('tests')) OR $(MSBuildProjectName.EndsWith('Tests'))">true</IsTestProject>
     <IsSampleProject Condition="$(RepoRelativeProjectDir.Contains('sample'))">true</IsSampleProject>
   </PropertyGroup>
 
