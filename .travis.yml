@@ -4,9 +4,6 @@ dotnet: 2.1.502
 
 solution: Oath.sln
 
-before_install:
-- mkdir .nuget
-- wget -O .nuget/nuget.exe https://dist.nuget.org/win-x86-commandline/latest/NuGet.exe
 install:
 - dotnet restore Oath.sln
 script:
