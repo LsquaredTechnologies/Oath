@@ -21,6 +21,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3257D7AA-E592-47B4-BB7F-291AF266E1F6}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.travis.yml = .travis.yml
 		Directory.Build.props = Directory.Build.props
 		Oath.sln.vsspell = Oath.sln.vsspell
 		README.md = README.md
@@ -28,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAuth", "src\OpenAuth\OpenAuth.csproj", "{2CE790B4-5BF8-44D9-8B0F-AA962D83265C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAuth.UnitTests", "tests\OpenAuth.UnitTests\OpenAuth.UnitTests.csproj", "{41C386C0-E872-4743-8759-C330A8DDC398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAuth.UnitTests", "tests\OpenAuth.UnitTests\OpenAuth.UnitTests.csproj", "{41C386C0-E872-4743-8759-C330A8DDC398}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

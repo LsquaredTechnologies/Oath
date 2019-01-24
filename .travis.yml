@@ -1,0 +1,14 @@
+language: csharp
+mono: none
+dotnet: 2.1.502
+
+solution: Oath.sln
+
+before_install:
+- mkdir .nuget
+- wget -O .nuget/nuget.exe https://dist.nuget.org/win-x86-commandline/latest/NuGet.exe
+install:
+- dotnet restore Oath.sln
+script:
+- dotnet build --no-restore -c Release src/OpenAuth/OpenAuth.csproj
+- dotnet test --no-restore --collect "Code Coverage" -c Release tests/OpenAuth.UnitTests/OpenAuth.UnitTests.csproj
