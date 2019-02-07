@@ -19,9 +19,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Packaging">
-    <Description>
-      Contains some Oath implementations like HOTP, TOTP, and OCRA.
-    </Description>
+    <Description>Contains some Oath implementations like HOTP, TOTP, and OCRA.</Description>
     <Keyword>hotp;totp;ocra;oath;openauthentication;generator;code;pin</Keyword>
     <PackageIconUrl>
       <!-- TODO -->

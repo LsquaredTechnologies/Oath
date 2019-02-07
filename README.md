@@ -1,7 +1,7 @@
 # Oath / OpenAuTHentication
 
 [![Azure build status](https://lsquared.visualstudio.com/Oath/_apis/build/status/Oath-CI)](https://lsquared.visualstudio.com/Oath/_build/latest?definitionId=5)
-[![Travis build status](https://api.travis-ci.org/LsquaredTechnologies/Oath.svg)](https://travis-ci.org/LsquaredTechnologies/Oath/)
+[![Travis build status](https://travis-ci.org/LsquaredTechnologies/Oath.svg?branch=master)](https://travis-ci.org/LsquaredTechnologies/Oath/)
 
 ## Documentation
 

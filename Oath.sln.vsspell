@@ -15,9 +15,9 @@
   <InheritXmlSettings>True</InheritXmlSettings>
   <IgnoredWords>
     <Ignore>Lsquared</Ignore>
-    <Ignore>ocra</Ignore>
     <Ignore>timestamp</Ignore>
     <Ignore>hotp</Ignore>
+    <Ignore>ocra</Ignore>
     <Ignore>totp</Ignore>
   </IgnoredWords>
 </SpellCheckerConfiguration>
