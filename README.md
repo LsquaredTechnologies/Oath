@@ -1,5 +1,6 @@
 # Oath / OpenAuTHentication
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Azure build status](https://lsquared.visualstudio.com/Oath/_apis/build/status/Oath-CI)](https://lsquared.visualstudio.com/Oath/_build/latest?definitionId=5)
 [![Travis build status](https://travis-ci.org/LsquaredTechnologies/Oath.svg?branch=master)](https://travis-ci.org/LsquaredTechnologies/Oath/)
 [![Coverage Status](https://coveralls.io/repos/github/LsquaredTechnologies/Oath/badge.svg?branch=master)](https://coveralls.io/github/LsquaredTechnologies/Oath?branch=master)
