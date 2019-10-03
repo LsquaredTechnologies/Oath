@@ -2,6 +2,8 @@
 
 [![Azure build status](https://lsquared.visualstudio.com/Oath/_apis/build/status/Oath-CI)](https://lsquared.visualstudio.com/Oath/_build/latest?definitionId=5)
 [![Travis build status](https://travis-ci.org/LsquaredTechnologies/Oath.svg?branch=master)](https://travis-ci.org/LsquaredTechnologies/Oath/)
+[![Coverage Status](https://coveralls.io/repos/github/LsquaredTechnologies/Oath/badge.svg?branch=master)](https://coveralls.io/github/LsquaredTechnologies/Oath?branch=master)
+[![NuGet version](https://buildstats.info/nuget/Lsquared.Extensions.OpenAuth)](https://www.nuget.org/packages/Lsquared.Extensions.OpenAuth)
 
 ## Documentation
 
