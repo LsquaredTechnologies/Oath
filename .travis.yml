@@ -1,16 +1,15 @@
 language: csharp
 mono: none
-dotnet: 2.2.401
-
-solution: Oath.sln
+dotnet: 2.2.104
 
 install:
-- dotnet tool install coverlet.console --version 1.6.0 --tool-path tools
-- dotnet tool install coveralls.net --version 1.0.0-beta0002 --tool-path tools
-- dotnet restore Oath.sln
+  - sudo apt install -qq dotnet-sdk-2.1
+  - sudo apt install -qq dotnet-sdk-3.0
+  - dotnet tool install coverlet.console --version 1.6.0 --tool-path tools
+  - dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
 script:
-- dotnet build --no-restore -c Release src/OpenAuth/OpenAuth.csproj
-- dotnet build --no-restore -c Release tests/OpenAuth.UnitTests/OpenAuth.UnitTests.csproj
-#- dotnet test --no-restore --collect "Code Coverage" -c Release tests/OpenAuth.UnitTests/OpenAuth.UnitTests.csproj
-- ./tools/coverlet --target dotnet --targetargs "test --no-restore -c Release tests/OpenAuth.UnitTests/OpenAuth.UnitTests.csproj" tests/OpenAuth.UnitTests/bin/Release/netcoreapp2.1/OpenAuth.UnitTests.dll --format opencover
-- ./tools/csmacnz.coveralls --opencover -i coverage.opencover.xml
+  - dotnet restore
+  - dotnet build --no-restore -c Release src/OpenAuth/OpenAuth.csproj
+  - dotnet build --no-restore -c Release tests/OpenAuth.UnitTests/OpenAuth.UnitTests.csproj
+  - ./tools/coverlet --target dotnet --targetargs "test --no-restore --no-build -c Release tests/OpenAuth.UnitTests/OpenAuth.UnitTests.csproj" tests/OpenAuth.UnitTests/bin/Release/netcoreapp3.0/OpenAuth.UnitTests.dll --format opencover
+  - ./tools/csmacnz.Coveralls --opencover -i coverage.opencover.xml
